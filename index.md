@@ -1,4 +1,4 @@
-![Image](me.jpg)
+![Image](/assets/me.jpg)
 
 ## About
 
