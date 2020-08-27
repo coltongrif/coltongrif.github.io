@@ -10,4 +10,4 @@ I am a second-year graduate student at the [University of Pennsylvania](https://
 
 ## [Miscellaneous](misc.md)
 
-*Email: akwon [at] sas [dot] upenn [dot] edu*
+*Email: akwon [at] upenn [dot] edu*
