@@ -1,4 +1,4 @@
-I am currently thinking about rational points on curves and connections to abelian varieties. 
+I am currently thinking about rational points over large fields and rank gain of elliptic curves over certain abelian extensions.
 ## Publications 
 
 0. [A Note on Minimal Additive Complements](https://arxiv.org/abs/1708.01287). _Discrete Mathematics_ **342** (2019), 1912-1918.
