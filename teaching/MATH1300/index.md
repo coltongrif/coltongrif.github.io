@@ -1,5 +1,7 @@
 ## Math 1300 Introduction to Calculus Summer II
 
+[Syllabus](syllabus.pdf)
+
 Office Hours: M, W, F 5-5:30pm, T, Th 2-4pm, or by appointment
 
 ## Resources
