@@ -23,3 +23,5 @@ There are also other great resources that adhere less closely to a standard cour
 [Problem Set 1](pset1.pdf)
 
 [Problem Set 2](pset2.pdf)
+
+[Problem Set 3](pset3.pdf)
