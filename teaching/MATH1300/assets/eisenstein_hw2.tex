@@ -1,0 +1,32 @@
+\documentclass{article}
+\usepackage{akwon}
+\setlength{\parindent}{0pt}
+\title{Homework 2 feedback}
+\author{}
+\date{17/20}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item Good!
+	\item Good!	
+	\item (1/2) The problem is quite clear about how the derivative should be computed from the limit definition according to the example from class. The purpose of this problem is to see how we can prove the power rule in general, not just for integer powers of $x$ or $x^{1/2}$ like we did in class. The argument goes as follows:\\
+		\begin{align*}
+		\frac{\sqrt[3]{x+h} - \sqrt[3]{x}}{h} \cdot \frac{\sqrt[3]{x+h}^{2} + \sqrt[3]{x+h} \sqrt[3]{x} + \sqrt[3]{x}^{2}}{\sqrt[3]{x+h}^{2} + \sqrt[3]{x+h} \sqrt[3]{x} + \sqrt[3]{x}^{2}} &= \frac{\sqrt[3]{x+h}^{3} - \sqrt[3]{x}^{3}}{h \cdot (\sqrt[3]{x+h}^{2} + \sqrt[3]{x+h} \sqrt[3]{x} + \sqrt[3]{x}^{2})}\\
+		&= \frac{1}{\sqrt[3]{x+h}^{2} + \sqrt[3]{x+h} \sqrt[3]{x} + \sqrt[3]{x}^{2}},
+		\end{align*}
+		and taking $h \to 0$ we find that the limit is equal to $\frac{1}{3 \sqrt[3]{x^{2}}} = \frac{1}{3} x^{-2/3}$.
+	\item For part (c), the derivative is actually 0. My original solution had an error in it, so this problem was harder than I intended; there is a solution using the Squeeze Theorem that only uses facts we have already discussed in class, but it is a little tricky. 
+	\item Good!
+	\item (1/2) When implicitly differentiating the right hand side, $\pi(x+y)$, we should have $\pi(1 + y')$ rather than just $\pi$. This changes the expression for $y'$ to 
+		\[
+			y' = \frac{1 - y \cos(\pi xy)}{x \cos(\pi xy) - 1}.
+		\]
+	\item Good!
+	\item (1/2) What does the equation $y = 2x^{2} - 1$ represent? I suppose this is somehow using the computation of the derivative, but this is not the equation of a tangent line, since it is a parabola\ldots I don't think this method will work if the point $(0,-1)$ is replaced with a different point, but I'm happy to be convinced otherwise if I've misunderstood what you wrote.\\
+		Here is how the solution is meant to go: given an arbitrary point $(a, a^{2})$ on the parabola, the equation of the tangent line at that point is given by 
+		\[
+			(y - a^{2}) = (2a) (x-a),
+		\]
+		since the derivative (i.e., slope) at $x=a$ is $2a$. This equation rewrites as $y = 2ax - a^{2}$. Thus, in order for the tangent line to have intercept $(0, -1)$, we should have $a^{2} = 1$. Then, $a = \pm 1$, and the lines are given by $y = 2x-1, y = -2x-1$.
+\end{enumerate}
+\end{document}

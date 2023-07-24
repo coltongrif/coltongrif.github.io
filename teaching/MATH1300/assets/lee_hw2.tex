@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{akwon}
+\setlength{\parindent}{0pt}
+\title{Homework 2 feedback}
+\author{19/20}
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item Good!
+	\item Good!
+	\item Good!
+	\item For part (c), L'Hospital's Rule doesn't apply directly because we don't know that the \emph{derivative} of $\sin(x)/x$ is continuous; that is, we don't know that
+		\[
+			f'(0) = \lim_{h \to 0} f'(h).
+		\]
+		You computed the right hand side, but we don't know if it is equal to the left hand side. This problem was accidentally harder than I thought (I thought there was a simpler solution but I messed up), but for the sake of completeness, here's a potential solution that only uses material we've covered so far.\\
+
+		In order to compute $f'(0)$, we can go back to the definition. Then, since $\lim_{x \to 0} \frac{\sin(x)}{x} = 1$, this means
+		\[
+			f'(0) = \lim_{h \to 0} \frac{\frac{\sin(h)}{h} - 1}{h}.
+		\]
+		Recalling that $\cos(h) \leq \frac{\sin(h)}{h} \leq \frac{1}{\cos(h)}$, we can squeeze the above quantity:
+		\[
+			\lim_{h \to 0} \frac{\cos(h) - 1}{h} \leq \lim_{h \to 0} \frac{\frac{\sin(h)}{h} - 1}{h} \leq \lim_{h \to 0} \frac{\frac{1}{\cos(h)}-1}{h} = \lim_{h \to 0} \frac{1 - \cos(h)}{h \cos(h)}.
+		\]
+		I also mentioned once in class that $\lim_{h \to 0} \frac{\cos(h) - 1}{h} = 0$, and therefore both the left and right terms above go to 0. By the squeeze theorem, $f'(h) = 0$. This wasn't the solution I intended, and I don't expect you to find this on your own. Sorry about that, but I hope you can learn something from this problem!
+	\item Good!
+	\item Good! 
+	\item (1/2) For part (c), I don't see the chain rule being used appropriately. The derivative should be $\frac{1}{\sqrt{1 - \log(x)^{2}}} \cdot \frac{1}{x}$, and when evaluated at $x=1$ this gives $\frac{1}{1 - 0 }\cdot \frac{1}{1}$. (Concerning the use of $\log$ and $\ln$, I believe I said in lecture that I always mean the natural logarithm when I write $\log$.)
+	\item Good!
+\end{enumerate}
+\end{document}

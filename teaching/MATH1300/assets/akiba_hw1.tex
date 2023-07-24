@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage{akwon}
+\setlength{\parindent}{0pt}
+\title{Homework 1 feedback}
+\author{14/20}
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item (1/2) I don't recognize the graph that was drawn on the page, was it drawn horizontally? Even then, it still doesn't look quite right\ldots I suspect a typo was made when the function was input to a graphing calculator.\\
+		The function $f(x) = e^{x^{2}} \sin(4x)$ \emph{is} odd, because $f(-x) = e^{(-x)^{2}} \sin(4(-x)) = e^{x^{2}} (- \sin(4x)) = - f(x)$.
+	\item (1/2) For (b), the function $\cos(x^{5})$ is \emph{not} invertible, in particular because the graph does not pass the horizontal line test on the domain $[0, \pi/2]$. Another way to see this is that the largest possible range for the ``inverse'' $\sqrt[5]{\cos^{-1}(y)}$ is $[0, \sqrt[5]{\pi/2}]$, but $\sqrt[5]{\pi/2} \approx 1.09$. That means that there are values of $x$ between $1.09$ and $\pi/2 \approx 1.57$ such that $g(f(x)) \neq x$, since $g$ can only ever output a value that is at most $\sqrt[5]{\pi/2}$.\\
+		For (c), the function is \emph{not} invertible because the domain is too large; again, the easiest way to see this is that the graph of $\sin(x)$ fails the horizontal line test on the domain $[0, \pi]$. However, if we were to restrict the domain to $[0, \pi/2]$, then the function would be invertible.\\
+		For (d), I don't understand the comment about the function increasing on $(1, \infty)$. I think the function is always decreasing on $[0, \infty)$.
+	\item Good!
+	\item (1/2) The correct answer was given for (a) using a valid technique, but the purpose of the homework is to illustrate how to use the techniques from that week of instruction. L'Hospital's rule has not been introduced yet.\\
+		Insufficient detail provided for (d). 
+	\item (1/2) For (a), it appears the limit was written incorrectly; the denominator is missing?\\
+		For (c), what does it mean to cancel out $(x-1)$ from the numerator and denominator? (The $x-1$ in the numerator was the input to the sine function.) What does $\frac{\sin^{2}}{x-1}$ mean?
+	\item Good!
+	\item For (a), to say that there is a discontinuity at $x=1$ but then the function can be rewritten so that it is continuous is actually the definition of a removable discontinuity. In other words, ``there was a discontinuity (when the function had $\frac{x^{3} - 1}{x-1}$), but now (when the function is rewritten as $x^{2} + x + 1$) there isn't; it was \emph{removed}.'' This is why we call these points removable discontinuities.
+	\item (1/2) $f(-2) = 32$, so there was a typo somewhere. However, just calculating $f(2) = -16$ is not enough, because this only demonstrates that $f$ changed sign once; this only guarantees the function has at least one root. The question asks for more than one root. One way to do this is to check $f(-1.5) < 0$, so that there is a root between $-2$ and $-1.5$, and then check $f(1) = 2 > 0$, so there is a root between $1$ and $2$. Thus, there are at least \emph{two} roots. (Also, the given polynomial $f$ has degree 8, not degree 3, so the statement about odd polynoimals always having roots does not apply.)
+	\item (1/2) For (a), the way the argument should be presented for full credit is something like: define $f(x) = 2023 - \sin(x) - x$. Then, $f(0) = 2023 > 0$, but $f(2025) < 0$. Therefore, by the intermediate value theorem, $f$ has a root between $0$ and $2023$. This gives a solution to $2023 - \sin(x) = x$. (I do not understand what ``$2023 - \sin(x)$ covers all real numbers'' means, because this expression can only take values in $2023 \pm 1$, since $\sin(x)$ is between $-1$ and $1$.)\\
+		For (b), no additional points deducted because this was my mistake, but there is actually a typo ($\operatorname{exp}(2023x) = x$ actually does not have a solution, but $\operatorname{exp}(2023x) = -x$ does; this is what I meant to write).\\
+		For (c), the reasoning is insufficient. A valid argument would take the form of the one in (a), using the intermediate value theorem as was done in class. For example, defining $f(x) = \sin(x) - x^{2023}$ and checking $f(1) > 0$, $f(-1) < 0$ guarantees there is a root of $f$ between $-1$ and $1$. A root of $f$ is the same as a solution to $\sin(x) = x^{2023}$.
+\end{enumerate}
+\end{document}
