@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{akwon}
+\title{Homework 3 feedback}
+\author{16/20}
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item Small arithmetic error; for part (a), the final answer should be computed as $\frac{1}{\operatorname{arctan}(1)} \cdot \frac{1}{1+(1)^{2}} = \frac{1}{\pi/4} \cdot \frac{1}{2} = \frac{2}{\pi}$.
+	\item Good!
+	\item (0/2) The first line is correct, but I don't really understand what's written on the second line.
+	\item Good! 
+	\item (1/2) For part (a), the equation of the tangent line at $x = 1$ should pass through the point $(1,0)$ and have slope 1, so the equation would be $y = x-1$. (The derivative $\frac{1}{x}$ needs to be evaluated at $x=1$ to give the slope at $x=1$.) Then plugging in $x = 1.1$ gives the approximation $0.1$, whereas the actual answer is 0.095, so it's pretty close.\\
+		For part (b), again the derivative should be evaluated at the ``reference point'' $x = 2025$, so that the slope of the tangent line is $\frac{1}{2 \sqrt{2025}} = \frac{1}{2 \cdot 45}$, since $\sqrt{2025} = 45$. Then, the final answer is $45 - \frac{1}{45} = \frac{2024}{45}$.
+	\item Good!
+	\item Good! 
+	\item (1/2) Denominator was changed from $(x+1)^{2}$ to $x^{2} + 1$, which changes everything\ldots after the error everything was done correctly though. When the derivative is computed as
+		\[
+			1 - \frac{4}{(x+1)^{2}} = \frac{(x+3)(x-1)}{(x+1)^{2}},
+		\]
+		then the critical points in the domain are just $x=1$. The endpoints evaluate to $f(0) = 0$, $f(3) = 0$, so we see that $f(1) = -1$ is the minimum.
+	\item Good!
+\end{enumerate}
+\end{document}

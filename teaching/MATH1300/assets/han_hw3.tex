@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{akwon}
+\setlength{\parindent}{0pt}
+\title{Homework 3 feedback}
+\author{}
+\date{14/20}
+\begin{document}
+\maketitle
+Overall, there seem to be some unfortunate arithmetic errors throughout the assignment. Please be mindful and try to double check your answers!
+\begin{enumerate}
+	\item (1/2) For part (b), you need to use the fact that $e^{\log 1/5} = 1/5$ to have a hope of getting a sensible answer at the end of it all. I'm not sure why a new factor of $\sqrt{1 - 4e^{2 \log 1/5}}$ is introduced, since it should only be $2e^{\log 1/5}$. (This is written correctly on the third line of part (b)). Then, the answer should be 
+		\[
+			\frac{2}{5} \cdot \frac{1}{\sqrt{1 - \frac{4}{5^{2}}}} = \frac{2}{5} \cdot \frac{5}{\sqrt{21}} = \frac{2}{\sqrt{21}}.
+		\]
+	\item (1/2) For part (b), the final answer should be $\frac{39}{9} = \frac{13}{3}$.\\
+		For part (c), when differentiating $g(x^{2})$ (in the product rule), we should get $g'(x^{2}) \cdot 2x$ via the chain rule. Thus the final answer should be $f(0) \cdot g'(1) \cdot 2(1) = -18$.
+	\item Good!
+	\item Good!
+	\item Arithmetic errors in part (a)? Using $\log x \approx f'(1) (x-1) + f(1) = f'(1) (x-1)$ we just get $\log(1.1) \approx 1 \cdot (1.1 - 1) = 0.1$.
+	\item Good!
+	\item (1/2) For part (a), graph the function $-(1/2)^{x}$. It has the desired properties. For part (b), notice that the derivative of $-x^{2}$ is not always negative. For $x < 0$, $f'(x) = -2x$ is actually positive. One should rather consider a function like $f(x) = - e^{x}$. (Look at the graph!)
+	\item (0/2) The critical points are not $x = 0, 3$ because those are not the roots of the derivative. The expression $\frac{x(x-3)}{x+1}$ is equal to the original function $f$; one needs to take the derivative and then set this equal to 0. (It turns out that $x=1$ is where the minimum occurs, but I don't understand how you came to that conclusion.)
+	\item (1/2) It is correct that we should evaluate $f''(1) = -a(a+2)$, but we need this quantity to be positive. $a = 0, -2$ are the important values to consider, but upon further consideration this leads to the answer $-2 < a < 0$ because this is where the parabola $-a (a+2)$ is positive. Not sure where D came from\ldots
+\end{enumerate}
+\end{document}

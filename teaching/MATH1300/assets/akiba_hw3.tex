@@ -1,0 +1,24 @@
+\documentclass{article}
+\usepackage{akwon}
+\setlength{\parindent}{0pt}
+\title{Homework 3 feedback}
+\author{18/20}
+\date{}
+\begin{document}
+\maketitle
+\begin{enumerate}
+	\item Good!
+	\item Good!
+	\item In the same way that we can calculate the derivative of $\operatorname{arctan}(x) = \frac{1}{1+x^{2}}$, we can calculate that the derivative of $\operatorname{arccot}(x) = \frac{-1}{1+x^{2}}$. If we let $y = \operatorname{arccot}(x)$ then $\cot y = x$, and since $1 + \cot^{2} y = \csc^{2} y$, we have $\csc^{2} y = \csc^{2}(\operatorname{arccot} x) = 1 + \cot^{2} (\operatorname{arccot} x) = 1 + x^{2}$.
+	\item Good!
+	\item Good!
+	\item Good! 
+	\item (1/2) We discussed part (c) in office hours, but here's another way to see why this case cannot happen. Notice that a concave up function (namely, a function where $f''(x) > 0$ for all $x$) will always lie above any tangent line. However, basically any tangent line will eventually go above the $x$-axis, and thus the function must eventually do this also. Thus, the condition $f''(x) > 0$ is incompatible with the condition $f(x) < 0$.
+	\item (1/2) I don't recognize the method used to calculate the derivative. It should be 
+		\[
+			f'(x) = 1 - \left( \frac{4 (x+1) - (4x)(1)}{(x+1)^{2}} \right) = 1 - \frac{4}{(x+1)^{2}},
+		\]
+		and then solving for critical points yields $(x+1)^{2} = 4 \Leftrightarrow x = -3, 1$. However, only $x=1$ is in the domain, and then we can check that $f(1) = -1$, while $f(0) = f(3) = 0$, so $-1$ is the minimum value of the function on $[0,3]$.
+	\item Good!
+\end{enumerate}
+\end{document}

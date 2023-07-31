@@ -27,3 +27,5 @@ There are also other great resources that adhere less closely to a standard cour
 [Problem Set 3](pset3.pdf)
 
 [Problem Set 4](pset4.pdf)
+
+[Extra Credit](extra_credit.pdf)
