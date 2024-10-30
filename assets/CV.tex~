@@ -5,95 +5,107 @@
 \usepackage{palatino}
 \urlstyle{same}
 \setlength{\parindent}{0pt}
+\setlength{\marginparpush}{0pt}
+\setlength{\marginparwidth}{85pt}
 \begin{document}
+
 \LARGE{Andrew Kwon}\vspace{0.0in}\\
 
 \normalsize
 Department of Mathematics\\
 University of Pennsylvania\\
-David Rittenhouse Laboratory, 33rd Street\\
-Philadelphia, PA 19103\\
+David Rittenhouse Laboratory\\
+Philadelphia, PA 19104\\
 
 email: \href{mailto:akwon@upenn.edu}{akwon@upenn.edu}\\
 website: \url{https://andrewokwon.github.io}\vspace{0.25in}\\
-
+\reversemarginpar
 \Large{Education}\vspace{0.2in}\\
 \normalsize
-\begin{tabular}{r l}
-	Expected May 2024 & PhD in Mathematics, University of Pennsylvania\\
-	May 2019 & B.S. in Mathematics, Carnegie Mellon University
-\end{tabular}
+PhD in Mathematics, University of Pennsylvania\marginpar[\raggedleft Expected 2025]{}\\
+{\small{Advisor: Florian Pop}}\\
+
+BSc in Mathematics, Carnegie Mellon University\marginpar[\raggedleft 2019]{}
+\vspace{0.25in}
+
+\Large{Research Interests}\vspace{0.2in}\\
+\normalsize
+Galois theory, arithmetic geometry, model-theoretic algebra
 \vspace{0.25in}
 
 \Large{Awards and Honors}\vspace{0.2in}\\
 \normalsize
-\begin{tabular}{r l}
-	2019 - 2024 & NSF Graduate Research Fellowship (NSF GRFP)\\
-	2018 & Goldwater Scholar\\
-	2017 & William Lowell Putnam Competition Honorable Mention
-\end{tabular}
+\marginpar[\raggedleft 2019 - 2024]{}NSF Graduate Research Fellowship\\
+\marginpar[\raggedleft 2018]{}Goldwater Scholar\\
+\marginpar[\raggedleft 2017]{}William Lowell Putnam Competition Honorable Mention
 \vspace{0.25in}
 
 \Large{Publications \& Preprints}\vspace{0.2in}\\
 \normalsize
+A. Kwon, \textit{Convergent Decomposition Groups and the $\mathfrak{S}$-adic Shafarevich Conjecture}, preprint available upon request.\\
+
+A. Kwon, \textit{A Note on Diophantine Subsets of Large Fields,} preprint available upon request.\\
+
 A. Kwon, \textit{A Note on Minimal Additive Complements,} Discrete Mathematics, 342 (7) (2019) 1912-1918.\\
 
-M. Asada, R. Chen, E. Fourakis, Y. Kim, A. Kwon, J. D. Lichtman, B. Mackall, S. J. Miller, E. Winsor, K. Winsor, J. Yang, and K. Yang, \textit{Lower-Order Biases in Second Moments of Dirichlet Coefficients in Families of $L$-Functions,} Experimental Mathematics, to appear.
+M. Asada, R. Chen, E. Fourakis, Y. Kim, A. Kwon, J. D. Lichtman, B. Mackall, S. J. Miller, E. Winsor, K. Winsor, J. Yang, and K. Yang, \textit{Lower-Order Biases in Second Moments of Dirichlet Coefficients in Families of $L$-Functions,} Experimental Mathematics, 32 (3), 431-456.
 
 \vspace{0.25in}
-\Large{Talks}\\
+\Large{Talks}\vspace{0.2in}\\
 \normalsize
-\begin{itemize}
-	\item Joint Mathematics Meetings, San Diego, CA 2018. 
-	\item Young Mathematicians Conference, The Ohio State University, Columbus, OH 2016.
-\end{itemize}
+\marginpar[\raggedleft Nov. 2024]{}Penn Galois Seminar\\
+\marginpar[\raggedleft Oct. 2024]{}Anabelian Geometry and Representations of Fundamental Groups @ MFO\\
+\marginpar[\raggedleft Sep. 2024]{}Philadelphia Area Number Theory Seminar\\
+\marginpar[\raggedleft Jul. 2024]{}FRG Workshop on Definability, Decidability, and Computability @ Cambridge\\
+\marginpar[\raggedleft Dec. 2023]{}Penn Algebra Seminar
+\vspace{0.25in}
 
-\newpage
 \Large{Teaching}\vspace{0.2in}\\
 \normalsize
-\begin{tabular}{r l}
-	2020 - 2021 & \textit{Teaching Assistant}\\
-	& University of Pennsylvania Mathematics Department\\
-	&\small{Taught section/graded problem sets for Multivariable Calculus}.\\
-	&\\
-	2016 - 2019 & \textit{Teaching Assistant}\\
-	& Carnegie Mellon University Mathematics Department\\
-	& \small{Taught section/graded problem sets for: Concepts of Mathematics (3x),}\\
-	& \small{Linear Algebra.} \normalsize\\
-	&\\
-	2014, 2015 & \textit{Course Instructor}\\
-	& A-Star Summer Math Camp\\
-	& \small{Taught courses in elementary combinatorics and number theory to mid-}\\
-	& \small{dle school and high school students}.
-\end{tabular}
+\marginpar[\raggedleft{Summer 2023}]{}\textit{Instructor of Record}\\
+	University of Pennsylvania\\
+	\small{Designed lectures, problem sets, and assessments for Introduction to Calculus.}\normalsize\\
+	
+	\normalsize\textit{Teaching Assistant}\marginpar[\raggedleft{2020 - 2021}]{}\\
+	\marginpar[\raggedleft{2024 -     }]{}University of Pennsylvania\\
+	\small{Taught section/graded problem sets for Multivariable Calculus}.\\
+	
+	\normalsize\textit{Teaching Assistant}\marginpar[\raggedleft{2016 - 2019}]{}\\
+	Carnegie Mellon University\\
+	\small{Taught section/graded problem sets for: Concepts of Mathematics (3x), Linear Algebra.} \normalsize\\
 
 \vspace{0.25in}
 \Large{Employment}\vspace{0.2in}\\
 \normalsize
-\begin{tabular}{r l}
-	2018 & \text{Research Intern}\\
-	& National Security Agency\\
-	&\small{Applied and extended language modeling and $n$-gram techniques to a high-}\\
-	&\small{priority classified project.}
-\end{tabular}
+\marginpar[\raggedleft{2018}]{}\textit{Research Intern}\\
+	National Security Agency\\
+	\small{Applied and extended language modeling and $n$-gram techniques to a high-priority classified project.}
+	\normalsize
 
 \vspace{0.25in}
 \Large{Service and Activities}\vspace{0.2in}\\
 \normalsize
-\begin{tabular}{r l}
-	2021 -& Instructor\\
-	& Princeton Prison Teaching Initative\\
-	&\\
-	2021 & Mentor\\
-	& Penn Directed Reading Program\\
-	&\\
-	2020 & Teaching Assistant\\
-	& Penn Summer Math Academy\\
-	&\\
-	2018 - & Referee\\
-	& Journal of Number Theory, Publicationes Mathematicae Debrecen\\
-	&\\
-	2015 - 2018 & Co-founder, Vice President\\
-	& Carnegie Mellon Informatics and Mathematics Competition
-\end{tabular}
+Co-organizer\marginpar[\raggedleft{2024 -     }]{}\\
+Penn-Temple Algebra Day\\
+
+Academic Committee\marginpar[\raggedleft{2024}]{}\\
+GTA Philadelphia Conference at Temple\\
+
+Co-organizer\marginpar[\raggedleft{2022 - 2024}]{}\\
+Graduate Algebraic Geometry Seminar, University of Pennsylvania\\
+	
+Instructor\marginpar[\raggedleft{2021}]{}\\
+Princeton Prison Teaching Initative\\
+	
+Mentor\marginpar[\raggedleft{2021 - 2024}]{}\\
+Penn Directed Reading Program\\
+	
+Teaching Assistant\marginpar[\raggedleft{2020, 2022}]{}\\
+Penn Summer Math Academy\\
+	
+Referee\marginpar[\raggedleft{2018 - 2020}]{}\\
+Journal of Number Theory, Publicationes Mathematicae Debrecen
+	
+%Co-founder, Vice President\marginpar[\raggedleft{2015 - 2018}]{}\\
+%Carnegie Mellon Informatics and Mathematics Competition\\
 \end{document}
