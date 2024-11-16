@@ -1,111 +1,339 @@
-\documentclass{article}
-\usepackage{akwon}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true,urlcolor=cyan}
-\usepackage{palatino}
-\urlstyle{same}
-\setlength{\parindent}{0pt}
-\setlength{\marginparpush}{0pt}
-\setlength{\marginparwidth}{85pt}
+\documentclass[10pt, letterpaper]{article}
+\usepackage{amsrefs}
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Colton's CV},
+    pdfauthor={Colton Griffin},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\patchcmd{\ps@customFooterStyle}{\thepage}{
+    \color{gray}\textit{\small \thepage{} 
+    % of \pageref*{LastPage}
+    }
+}{}{} % replace number by desired string
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\circ$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
 \begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
 
-\LARGE{Andrew Kwon}\vspace{0.0in}\\
+    \placelastupdatedtext
+    \begin{header}
+        \textbf{\fontsize{24 pt}{24 pt}\selectfont Colton Griffin}
 
-\normalsize
-Department of Mathematics\\
-University of Pennsylvania\\
-David Rittenhouse Laboratory\\
-Philadelphia, PA 19104\\
+        \vspace{0.3 cm}
 
-email: \href{mailto:akwon@upenn.edu}{akwon@upenn.edu}\\
-website: \url{https://andrewokwon.github.io}\vspace{0.25in}\\
-\reversemarginpar
-\Large{Education}\vspace{0.2in}\\
-\normalsize
-PhD in Mathematics, University of Pennsylvania\marginpar[\raggedleft Expected 2025]{}\\
-{\small{Advisor: Florian Pop}}\\
+        \normalsize
+        \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm} University of Pennsylvania Department of Mathematics }%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{mailto:cmgrif@sas.upenn.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}cmgrif@sas.upenn.edu}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{tel:+90-541-999-99-99}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}0541 999 99 99}}%
+        \kern 0.25 cm%
+        \AND%
+        \kern 0.25 cm%
+        \mbox{\hrefWithoutArrow{https://coltongrif.github.io}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}https://coltongrif.github.io}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{https://linkedin.com/in/yourusername}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}yourusername}}%
+        % \kern 0.25 cm%
+        % \AND%
+        % \kern 0.25 cm%
+        % \mbox{\hrefWithoutArrow{https://github.com/yourusername}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}yourusername}}%
+    \end{header}
 
-BSc in Mathematics, Carnegie Mellon University\marginpar[\raggedleft 2019]{}
-\vspace{0.25in}
+    \vspace{0.3 cm - 0.3 cm}
 
-\Large{Research Interests}\vspace{0.2in}\\
-\normalsize
-Galois theory, arithmetic geometry, model-theoretic algebra
-\vspace{0.25in}
+    \section{Education}
 
-\Large{Awards and Honors}\vspace{0.2in}\\
-\normalsize
-\marginpar[\raggedleft 2019 - 2024]{}NSF Graduate Research Fellowship\\
-\marginpar[\raggedleft 2018]{}Goldwater Scholar\\
-\marginpar[\raggedleft 2017]{}William Lowell Putnam Competition Honorable Mention
-\vspace{0.25in}
 
-\Large{Publications \& Preprints}\vspace{0.2in}\\
-\normalsize
-A. Kwon, \textit{Convergent Decomposition Groups and the $\mathfrak{S}$-adic Shafarevich Conjecture}, preprint available upon request.\\
 
-A. Kwon, \textit{A Note on Diophantine Subsets of Large Fields,} preprint available upon request.\\
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{Aug 2023 – May 2028}}
+            {University of Pennsylvania}
 
-A. Kwon, \textit{A Note on Minimal Additive Complements,} Discrete Mathematics, 342 (7) (2019) 1912-1918.\\
+            \textit{PhD in Mathematics}
+        \end{twocolentry}
 
-M. Asada, R. Chen, E. Fourakis, Y. Kim, A. Kwon, J. D. Lichtman, B. Mackall, S. J. Miller, E. Winsor, K. Winsor, J. Yang, and K. Yang, \textit{Lower-Order Biases in Second Moments of Dirichlet Coefficients in Families of $L$-Functions,} Experimental Mathematics, 32 (3), 431-456.
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Coursework:} Complex algebraic geometry, algebraic geometry, mathematical physics, Brauer groups and Azumaya algebras, moduli spaces of curves 
+            \end{highlights}
+        \end{onecolentry}
+        \begin{twocolentry}{
+            
+            
+        \textit{Aug 2019 – May 2023}}
+            {Purdue University}
 
-\vspace{0.25in}
-\Large{Talks}\vspace{0.2in}\\
-\normalsize
-\marginpar[\raggedleft Nov. 2024]{}Penn Galois Seminar\\
-\marginpar[\raggedleft Oct. 2024]{}Anabelian Geometry and Representations of Fundamental Groups @ MFO\\
-\marginpar[\raggedleft Sep. 2024]{}Philadelphia Area Number Theory Seminar\\
-\marginpar[\raggedleft Jul. 2024]{}FRG Workshop on Definability, Decidability, and Computability @ Cambridge\\
-\marginpar[\raggedleft Dec. 2023]{}Penn Algebra Seminar
-\vspace{0.25in}
+            \textit{BS in Mathematics and Physics}
+        \end{twocolentry}
 
-\Large{Teaching}\vspace{0.2in}\\
-\normalsize
-\marginpar[\raggedleft{Summer 2023}]{}\textit{Instructor of Record}\\
-	University of Pennsylvania\\
-	\small{Designed lectures, problem sets, and assessments for Introduction to Calculus.}\normalsize\\
-	
-	\normalsize\textit{Teaching Assistant}\marginpar[\raggedleft{2020 - 2021}]{}\\
-	\marginpar[\raggedleft{2024 -     }]{}University of Pennsylvania\\
-	\small{Taught section/graded problem sets for Multivariable Calculus}.\\
-	
-	\normalsize\textit{Teaching Assistant}\marginpar[\raggedleft{2016 - 2019}]{}\\
-	Carnegie Mellon University\\
-	\small{Taught section/graded problem sets for: Concepts of Mathematics (3x), Linear Algebra.} \normalsize\\
 
-\vspace{0.25in}
-\Large{Employment}\vspace{0.2in}\\
-\normalsize
-\marginpar[\raggedleft{2018}]{}\textit{Research Intern}\\
-	National Security Agency\\
-	\small{Applied and extended language modeling and $n$-gram techniques to a high-priority classified project.}
-	\normalsize
 
-\vspace{0.25in}
-\Large{Service and Activities}\vspace{0.2in}\\
-\normalsize
-Co-organizer\marginpar[\raggedleft{2024 -     }]{}\\
-Penn-Temple Algebra Day\\
+    
+    \section{Research Interests}
+        Vertex operator algebras, derived algebraic geometry, moduli spaces of varieties
 
-Academic Committee\marginpar[\raggedleft{2024}]{}\\
-GTA Philadelphia Conference at Temple\\
+    \section{Awards and Honors}
+        \begin{twocolentry}{
+            \textit{2023}}
+                {Goldwater Scholarship}
+            \end{twocolentry}
+            \begin{twocolentry}{
+            \textit{2023-2028}}
+                {NSF Graduate Research Fellowship}
+            \end{twocolentry}
+    
+    \section{Publications}
+    \begin{biblist}
+    
+        \bib{Cohomological}{article}{
+        title={Cohomological vertex algebras},
+        author={Griffin C.},
+        journal={Preprint available upon request}
+        }
+        
+        \bib{Persistence}{article}{
+    title = {Persistence and disappearance of negative eigenvalues in dimension two},
+    author={Christiansen T. J.},
+    author={Datchev K. R.},
+      author={Griffin C.},
+journal = {Journal of Spectral Theory},
+pages = {first published online},
+year={2024}
+}
+        \bib{PhysRevE.110.014114}{article}{
+      title = {Simulations of classical three-body thermalization in one dimension},
+      author = {M. Eltolfa},
+      author = {X. Wang},
+      author = {Griffin C.},
+      author = {F. Robicheaux},
+      journal = {Phys. Rev. E},
+      volume = {110},
+      pages = {014114},
+      year = {2024},
+      publisher = {American Physical Society},
+    }
+    \bib{AS1}{article}{
+      title={An index for inclusions of operator systems}, 
+      author={ Araiza R.},
+      author={Griffin C. },
+      author={ Sinclair T.},
+      year={2024},
+      volume={91},
+      pages = {567-593},
+      journal={Journal of Operator Theory}
+    }
+    \bib{ApproxProj}{article}{
+    title = {Approximating projections by quantum operations},
+    author={Araiza R.},
+    author={Khilnani A.},
+      author={Griffin C.},
+      author={Sinclair T.},
+journal = {Linear Algebra and its Applications},
+volume = {663},
+pages = {178-199},
+year = {2023},
+issn = {0024-3795},
+}
 
-Co-organizer\marginpar[\raggedleft{2022 - 2024}]{}\\
-Graduate Algebraic Geometry Seminar, University of Pennsylvania\\
-	
-Instructor\marginpar[\raggedleft{2021}]{}\\
-Princeton Prison Teaching Initative\\
-	
-Mentor\marginpar[\raggedleft{2021 - 2024}]{}\\
-Penn Directed Reading Program\\
-	
-Teaching Assistant\marginpar[\raggedleft{2020, 2022}]{}\\
-Penn Summer Math Academy\\
-	
-Referee\marginpar[\raggedleft{2018 - 2020}]{}\\
-Journal of Number Theory, Publicationes Mathematicae Debrecen
-	
-%Co-founder, Vice President\marginpar[\raggedleft{2015 - 2018}]{}\\
-%Carnegie Mellon Informatics and Mathematics Competition\\
+\bib{QuantumGates}{article}{
+title = {Constructing approximately diagonal quantum gates},
+author = {Griffin C.},
+author = {Cui S.X.},
+journal = {International Journal of Quantum Information},
+issn = {0219-7499},
+number = {08},
+volume = {20},
+place = {United States},
+year = {2022},
+}
+
+
+    \end{biblist}
+
+    
+    
+    \section{Teaching}
+
+
+
+        
+        \begin{twocolentry}{
+            
+            
+        \textit{Fall 2023}}
+            {Teaching Assistant}
+
+            \textit{University of Pennsylvania}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Taught/graded for Math 3610 Advanced Calculus
+            \end{highlights}
+        \end{onecolentry}
+
+
+    
+    \section{Talks}
+    \begin{twocolentry}{
+        \textit{Nov 2024}}
+            {``Cohomological Vertex Algebras,'' Math-Physics Joint Seminar}
+        \end{twocolentry}
+
+
+        
+
+    
+
 \end{document}
