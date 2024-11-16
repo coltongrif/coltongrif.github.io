@@ -2,9 +2,7 @@
 
 ## About
 
-I am a sixth-year graduate student at the [University of Pennsylvania](https://www.math.upenn.edu/). I am fortunate to be advised by [Florian Pop](https://www2.math.upenn.edu/~pop/). My interests are broadly in Galois theory (including anabelian phenomena) and number theory. Before Penn, I was an undergraduate at [Carnegie Mellon University](https://www.cmu.edu/math). My CV is [here](/assets/CV.pdf).
-
-I am on the job market for Fall 2025!
+I am a second-year graduate student at the [University of Pennsylvania](https://www.math.upenn.edu/), and my research advisor is [Angela Gibney](https://www.angelagibney.org). I am primarily interested in mathematical physics, particularly in vertex operator algebras and moduli spaces of varieties. I received my undergraduate degree at Purdue University in Mathematics and Physics. You can find my CV [here](/assets/CV.pdf).
 
 ## [Teaching](/teaching/index.md)
 
@@ -12,4 +10,4 @@ I am on the job market for Fall 2025!
 
 ## [Miscellaneous](misc.md)
 
-*Email: akwon [at] sas [dot] upenn [dot] edu*
+*Email: cmgrif [at] sas [dot] upenn [dot] edu*
