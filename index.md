@@ -1,4 +1,4 @@
-![Image](/assets/me.jpg)
+<img src="/assets/me.jpg" alt="that's me!" width="50%" height="50%">
 
 ## About
 
