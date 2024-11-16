@@ -1,4 +1,4 @@
-<img src="/assets/me.jpg" alt="that's me!" width="30%" height="30%">
+<img src="/assets/me.jpg" alt="that's me!" width="40%" height="40%">
 
 ## About
 
