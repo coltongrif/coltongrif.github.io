@@ -16,7 +16,7 @@ Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+C
 
 3. An Index for Inclusions of Operator Systems (with Roy Araiza and Thomas Sinclair). [arXiv](https://arxiv.org/abs/2203.05710), also in [Journal of Operator Theory](http://dx.doi.org/10.7900/jot.2022jun27.2420).
 
-4. Approximating projections by quantum operations (with Roy Araiza, Aneesh Khilnani, and Thomas Sinclair. [arXiv](https://arxiv.org/abs/2203.02627), also in [Journal of Linear Algebra](https://doi.org/10.1016/j.laa.2023.01.008).
+4. Approximating projections by quantum operations (with Roy Araiza, Aneesh Khilnani, and Thomas Sinclair). [arXiv](https://arxiv.org/abs/2203.02627), also in [Journal of Linear Algebra](https://doi.org/10.1016/j.laa.2023.01.008).
 
 5. Constructing Approximately Diagonal Quantum Gates (with Shawn X. Cui) [arXiv](https://arxiv.org/abs/2109.05138), also in [International Journal of Quantum Information](https://doi.org/10.1142/S0219749922500253).
 
