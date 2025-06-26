@@ -24,4 +24,4 @@ Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+C
 
 ### Notes
 1. Notes on derived algebraic geometry. [pdf](/assets/CG-DAG.pdf)
- - These are the start of my attempt to learn about the subject, as a minor thesis for my oral exam.
+    - These are the start of my attempt to learn about the subject, as a minor thesis for my oral exam.
