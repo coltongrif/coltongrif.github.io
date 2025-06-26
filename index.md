@@ -9,7 +9,7 @@ I am a third-year PhD student at the [University of Pennsylvania](https://www.ma
 ## Research
 Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+Colton&searchtype=author&abstracts=show&order=-announced_date_first&size=50).
 
-# Publications
+### Publications
 1. Cohomological vertex algebras. [arXiv](https://arxiv.org/abs/2501.18720)
 
 2. Persistence and disappearance of negative eigenvalues in dimension two (with Tanya Christiansen and Kiril Datchev). [arXiv](https://arxiv.org/abs/2401.04622), also in [Journal of Spectral Theory](https://doi.org/10.4171/jst/523).
@@ -22,6 +22,6 @@ Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+C
 
 ## Other writing
 
-# Notes
+### Notes
 1. Notes on derived algebraic geometry. [pdf](/assets/CG-DAG.pdf)
  - These are the start of my attempt to learn about the subject, as a minor thesis for my oral exam.
