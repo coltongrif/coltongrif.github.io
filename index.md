@@ -2,7 +2,7 @@
 
 ## About
 
-I am a third-year PhD student at the [University of Pennsylvania](https://www.math.upenn.edu/), and my research advisor is [Angela Gibney](https://www.angelagibney.org). I am primarily interested in mathematical physics, particularly in vertex operator algebras and moduli spaces of varieties. I received my undergraduate degree at Purdue University in Mathematics and Physics. You can find my CV [here](/assets/CV.pdf).
+I am a third-year PhD student at the [University of Pennsylvania](https://www.math.upenn.edu/), and my research advisor is [Angela Gibney](https://www.angelagibney.org). I am primarily interested in mathematical physics, particularly in vertex operator algebras and moduli spaces of varieties. I received my undergraduate degree at Purdue University in mathematics and physics. You can find my CV [here](/assets/CV.pdf).
 
 *Email: cmgrif [at] sas [dot] upenn [dot] edu*
 
@@ -10,7 +10,7 @@ I am a third-year PhD student at the [University of Pennsylvania](https://www.ma
 Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+Colton&searchtype=author&abstracts=show&order=-announced_date_first&size=50).
 
 ### Publications
-1. Cohomological vertex algebras. [arXiv](https://arxiv.org/abs/2501.18720)
+1. Cohomological vertex algebras (in submission). [arXiv](https://arxiv.org/abs/2501.18720)
 
 2. Persistence and disappearance of negative eigenvalues in dimension two (with Tanya Christiansen and Kiril Datchev). [arXiv](https://arxiv.org/abs/2401.04622), also in [Journal of Spectral Theory](https://doi.org/10.4171/jst/523).
 
@@ -24,4 +24,4 @@ Here are my [arXiv submissions](https://arxiv.org/search/math?query=Griffin%2C+C
 
 ### Notes
 1. Notes on derived algebraic geometry. [pdf](/assets/CG-DAG.pdf)
-    - These are the start of my attempt to learn about the subject, as a minor thesis for my oral exam.
+    - These are notes written for my minor thesis in partial satisfaction of my oral exam, advised by Mona Merling.
